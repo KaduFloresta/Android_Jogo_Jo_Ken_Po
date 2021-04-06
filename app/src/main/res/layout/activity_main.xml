@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#46FF9800"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txtComputador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="8sp"
+            android:text="Computador"
+            android:textColor="?android:attr/colorActivatedHighlight"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageTitulo" />
+
+        <ImageView
+            android:id="@+id/imageTitulo"
+            android:layout_width="0dp"
+            android:layout_height="163dp"
+            android:layout_marginTop="8dp"
+            android:background="#7AFFC107"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/imgResultado"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtComputador"
+            app:srcCompat="@drawable/padrao" />
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Escolha Uma Opção Abaixo"
+            android:textColor="?android:attr/colorActivatedHighlight"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgResultado" />
+
+        <ImageView
+            android:id="@+id/imgPedra"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:onClick="selecionadoPedra"
+            app:layout_constraintEnd_toStartOf="@+id/imgPapel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+            app:srcCompat="@drawable/pedra" />
+
+        <ImageView
+            android:id="@+id/imgTesoura"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:onClick="selecionadoTesoura"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgPapel"
+            app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+            app:srcCompat="@drawable/tesoura" />
+
+        <ImageView
+            android:id="@+id/imgPapel"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:onClick="selecionadoPapel"
+            app:layout_constraintEnd_toStartOf="@+id/imgTesoura"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imgPedra"
+            app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+            app:srcCompat="@drawable/papel" />
+
+        <TextView
+            android:id="@+id/txtPedra"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="PEDRA"
+            android:textAlignment="center"
+            android:textColor="#CBFF8800"
+            app:layout_constraintEnd_toStartOf="@+id/txtPapel"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgPedra" />
+
+        <TextView
+            android:id="@+id/txtPapel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="PAPEL"
+            android:textAlignment="center"
+            android:textColor="#CBFF8800"
+            app:layout_constraintEnd_toStartOf="@+id/txtTesoura"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtPedra"
+            app:layout_constraintTop_toBottomOf="@+id/imgPapel" />
+
+        <TextView
+            android:id="@+id/txtTesoura"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="TESOURA"
+            android:textAlignment="center"
+            android:textColor="#CBFF8800"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtPapel"
+            app:layout_constraintTop_toBottomOf="@+id/imgTesoura" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
